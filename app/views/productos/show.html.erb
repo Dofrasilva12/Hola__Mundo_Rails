@@ -10,8 +10,7 @@
   <%= @producto.precio %>
 </p>
 
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
-<%= link_to 'Back', productos_path %>
+
 <table class="table table-dark">
   <thead>
     <tr>
@@ -31,3 +30,6 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Back', productos_path %>
