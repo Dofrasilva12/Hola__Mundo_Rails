@@ -12,3 +12,22 @@
 
 <%= link_to 'Edit', edit_producto_path(@producto) %> |
 <%= link_to 'Back', productos_path %>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Nombre producto</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr>
+        <td><%= @producto.nombre_producto %></td>
+        <td><%= @producto.precio %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
