@@ -21,6 +21,10 @@
     <%= form.date_select :fecha %>
   </div>
 
+<div class ="field">
+    <%= form.select :cliente_id, Cliente.all.collect {|x|[x.nombre_cliente, x.id]}, {:include_blank => "Selecciona un cliente"}%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
