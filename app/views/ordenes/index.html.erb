@@ -11,7 +11,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table table-striped table-dark">
     <% @ordenes.each do |ordene| %>
       <tr>
         <td><%= ordene.numero_orden %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Ordene', new_ordene_path %>
+<h3><%= link_to 'New Ordene', new_ordene_path %></h3>
