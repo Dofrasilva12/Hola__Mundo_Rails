@@ -24,7 +24,8 @@ class DetalleOrdensController < ApplicationController
   # POST /detalle_ordens
   # POST /detalle_ordens.json
   def create
-    @detalle_orden = DetalleOrden.new(detalle_orden_params)
+    params[:detalle_orden].permit!#permite acceso a las peticiones ordene
+    @detalle_orden = DetalleOrden.new( params[:detalle_orden])
 
     respond_to do |format|
       if @detalle_orden.save
