@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Nombre producto:</strong>
   <%= @producto.nombre_producto %>
 </p>
@@ -9,7 +9,21 @@
   <strong>Precio:</strong>
   <%= @producto.precio %>
 </p>
+-->
+<h1>Datos de Productos</h1>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>Nombre producto:</th>
+        <th><%= @producto.nombre_producto %></th>
+      </tr>
+    </thead>
+    <tbody>     
+      <tr>
+      <th>Precio: </th>
+        <th><%=@producto.precio %></th>
+      </tr>
+    </tbody>
+  </table>
 
-
-<h3><%= link_to 'Edit', edit_producto_path(@producto) %> |</h3>
-<h3><%= link_to 'Back', productos_path %></h3>
+<h3><%= link_to 'Edit', edit_producto_path(@producto) %> | <%= link_to 'Back', productos_path %></h3>

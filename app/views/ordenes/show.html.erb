@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Numero orden:</strong>
   <%= @ordene.numero_orden %>
 </p>
@@ -9,6 +9,22 @@
   <strong>Fecha:</strong>
   <%= @ordene.fecha %>
 </p>
+-->
+<h1>Datos de la orden</h1>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>Numero orden:</th>
+        <th><%= @ordene.numero_orden %></th>
+      </tr>
+    </thead>
+    <tbody>     
+      <tr>
+      <th>Fecha: </th>
+        <th><%=@ordene.fecha %></th>
+      </tr>
+    </tbody>
+  </table>
 
-<h3><%= link_to 'Edit', edit_ordene_path(@ordene) %> |</h3>
-<h3><%= link_to 'Back', ordenes_path %><h3>
+
+<h3><%= link_to 'Edit', edit_ordene_path(@ordene) %> |<%= link_to 'Back', ordenes_path %><h3>
