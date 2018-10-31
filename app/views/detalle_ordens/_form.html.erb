@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :cantidad :id=>cantlabel%>
-    <%= form.number_field :cantidad :id=>cantnum%>
+    <%= form.label :cantidad %>
+    <%= form.number_field :cantidad %>
   </div>
 
   <div class="field">
-    <%= form.label :precio_venta id=>preciolab %>
-    <%= form.text_field :precio_venta id=>preciotext%>
+    <%= form.label :precio_venta  %>
+    <%= form.text_field :precio_ventat%>
   </div>
 
   <div class ="field">
-    <%= form.select :producto_id, Producto.all.collect {|x|[x.nombre_producto, x.id]}, {:include_blank => "Selecciona un producto"} id=>seleccion%>
+    <%= form.select :producto_id, Producto.all.collect {|x|[x.nombre_producto, x.id]}, {:include_blank => "Selecciona un producto"} %>
   </div>
 
   <div class="actions">
-    <%= form.submit id=>enviar%>
+    <%= form.submit %>
   </div>
 <% end %>
