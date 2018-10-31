@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Rfc:</strong>
   <%= @cliente.rfc %>
 </p>
@@ -9,6 +9,23 @@
   <strong>Nombre cliente:</strong>
   <%= @cliente.nombre_cliente %>
 </p>
+-->
+<table class="table">
+    <thead>
+      <tr>
+        <th>RFC</th>
+        <th><%= @cliente.rfc %></th>
+      </tr>
+    </thead>
+    <tbody>     
+      <tr class="table-primary">
+      <th>Nombre Cliente</th>
+        <th><%= @cliente.nombre_cliente %></th>
+      </tr>
+    </tbody>
+  </table>
+
 
 <h3><%= link_to 'Edit', edit_cliente_path(@cliente) %> |</h3>
 <h3><%= link_to 'Back', clientes_path %></h3>
+
